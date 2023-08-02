@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <plugins>
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></plugin>
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor">
+<!--            <property name="maxTime" value="1" /> &lt;!&ndash;SQL是否格式化 默认false&ndash;&gt;-->
+            <property name="format" value="true" />
+        </plugin>
+<!--        乐观锁插件-->
+        <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor"></plugin>
+    </plugins>
+</configuration>
